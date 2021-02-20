@@ -1,0 +1,14 @@
+version: "2.5"
+
+services:
+
+  world-api:
+    image: flairstech
+    ports:
+      - 8080:8080
+    depends_on:
+      - world-database
+
+  world-database:
+    image: ghusta/postgres-world-db:2.5
+
